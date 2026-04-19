@@ -8,10 +8,6 @@ A modern web application that extracts text from images using OCR.SPACE API. Thi
 - 🎯 High accuracy text detection and recognition
 - 💻 Clean and modern user interface
 - ⚡ Real-time text extraction and display
-<<<<<<< HEAD
-=======
-
->>>>>>> 245b75f6cd3d4192deb356b5b51194799e500e4b
 
 ## Prerequisites
 
@@ -146,18 +142,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-<<<<<<< HEAD
-- https://ocr.space/ free api
-=======
-- https://ocr.space/ free api 
->>>>>>> 245b75f6cd3d4192deb356b5b51194799e500e4b
 - Express.js for the server framework
 - Multer for file upload handling
 
 ## Support
 
-<<<<<<< HEAD
 For support, email your queries to [sreenivasadyourworld@gmail.com] or open an issue in the GitHub repository.
-=======
-For support, email your queries to [sreenivasadyourworld@gmail.com] or open an issue in the GitHub repository. 
->>>>>>> 245b75f6cd3d4192deb356b5b51194799e500e4b
