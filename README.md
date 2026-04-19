@@ -1,19 +1,14 @@
 # Text Extractor
 
-A modern web application that extracts text from images using Google Cloud Vision API. This project provides a clean UI for uploading images and displays the extracted text in real-time.
+A modern web application that extracts text from images using OCR.SPACE API. This project provides a clean UI for uploading images and displays the extracted text in real-time.
 
 ## Features
 
-- 📷 Image text extraction using Google Cloud Vision API
+- 📷 Image text extraction using OCR.SPACE API
 - 🎯 High accuracy text detection and recognition
 - 💻 Clean and modern user interface
 - ⚡ Real-time text extraction and display
-- 🔒 Secure file handling and processing
-- 🚀 Easy to set up and use
 
-## Live Demo
-
-See the application Demo: [Text Extractor Demo Youtube](https://www.youtube.com/watch?v=FO7Lbuq74Y8)
 
 ## Prerequisites
 
@@ -26,7 +21,7 @@ Before you begin, ensure you have the following installed:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/anshumansp/Text-Extractor.git
+git clone https://github.com/Sreenivas7463/vision_api.git
 cd Text-Extractor
 ```
 
@@ -40,37 +35,8 @@ npm install
 PORT=3000
 UPLOAD_DIR=uploads
 MAX_FILE_SIZE=5242880
-GOOGLE_CLOUD_PROJECT_ID=your-project-id
-GOOGLE_APPLICATION_CREDENTIALS=./cloud-vision.json
+OCR_SPACE_API_KEY=your_key from OCR.space
 ```
-
-## Google Cloud Vision API Setup
-
-1. Create a Google Cloud Project:
-   - Go to [Google Cloud Console](https://console.cloud.google.com/)
-   - Create a new project or select an existing one
-   - Enable billing for the project
-
-2. Enable the Cloud Vision API:
-   - In the Cloud Console, go to "APIs & Services" > "Library"
-   - Search for "Cloud Vision API"
-   - Click "Enable"
-
-3. Create Service Account Credentials:
-   - Go to "APIs & Services" > "Credentials"
-   - Click "Create Credentials" > "Service Account"
-   - Fill in the service account details
-   - Grant the role "Cloud Vision API User"
-   - Click "Create Key" and select JSON
-   - Download the JSON key file
-
-4. Setup Credentials:
-   - Rename the downloaded JSON key file to `cloud-vision.json`
-   - Place it in the root directory of the project
-   - Add the file path to your .env file:
-     ```env
-     GOOGLE_APPLICATION_CREDENTIALS=./cloud-vision.json
-     ```
 
 ## Project Structure
 
@@ -87,31 +53,6 @@ Text-Extractor/
 ├── uploads/              # Temporary file storage
 ├── .env                 # Environment variables
 └── README.md            # Project documentation
-```
-
-## Implementation Details
-
-### Server Implementation (server.js)
-
-The server is built using Express.js and handles file uploads and text extraction:
-
-```javascript
-const express = require("express");
-const vision = require('@google-cloud/vision');
-
-// Configure Google Cloud Vision client
-const client = new vision.ImageAnnotatorClient({
-  keyFilename: './cloud-vision.json'
-});
-
-// Text recognition function
-async function recognizeDocumentText(imagePath) {
-  const [result] = await client.documentTextDetection(imagePath);
-  return {
-    text: result.fullTextAnnotation.text,
-    confidence: result.confidence || null
-  };
-}
 ```
 
 ### API Endpoints
@@ -193,10 +134,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- Google Cloud Vision API for text extraction
+- https://ocr.space/ free api 
 - Express.js for the server framework
 - Multer for file upload handling
 
 ## Support
 
-For support, email your queries to [contact@pixelizesolution.com] or open an issue in the GitHub repository. 
+For support, email your queries to [sreenivasadyourworld@gmail.com] or open an issue in the GitHub repository. 
